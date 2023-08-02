@@ -1,4 +1,19 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content-Security-Policy
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self';"
+    
+    # X-Frame-Options
+    X-Frame-Options = "SAMEORIGIN"
+    
+    # Referrer-Policy
+    Referrer-Policy = "no-referrer"
+    
+    # Permissions-Policy (Exemple avec la géolocalisation activée)
+    Permissions-Policy = "geolocation=(self)"
+
 [[redirects]]
-from = '/*'
-to = "/index.html"
-status = 200
+  from = '/*'
+  to = "/index.html"
+  status = 200
